@@ -8,13 +8,13 @@
 
 import Foundation
 
-class ServiceManager {
+class ServiceManager: BaseServiceManager {
     
     private let session: URLSession
     private var dataTask: URLSessionDataTask?
 
-    init(session: URLSession) {
-        self.session = session
+    required init() {
+        self.session = URLSession(configuration: .default)
     }
 
     func getData<T>(for request: T,

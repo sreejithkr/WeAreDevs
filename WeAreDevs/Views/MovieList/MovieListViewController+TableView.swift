@@ -9,16 +9,18 @@
 import UIKit
 
 extension MovieListViewController: UITableViewDelegate, UITableViewDataSource {
+    fileprivate var data: [Movie] {
+        return presenter.data
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: movieListIdentifier,
                                                  for: indexPath) 
         cell.textLabel?.text = data[indexPath.row].title
         return cell
     }
-    
-    
 }

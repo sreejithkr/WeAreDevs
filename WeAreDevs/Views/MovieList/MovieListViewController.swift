@@ -9,9 +9,8 @@
 import UIKit
 
 class MovieListViewController: UIViewController {
-    lazy var service = ServiceManager(session: URLSession(configuration: .default))
     var request: MovieListRequest?
-    var data: [Movie] = []
+    lazy var presenter: MovieListPresenter = MovieListPresenter()
     let movieListIdentifier =  "movieListIdentifier"
     @IBOutlet var movieTableView: UITableView!
     override func viewDidLoad() {
@@ -28,14 +27,9 @@ class MovieListViewController: UIViewController {
 
     private func loadData() {
         guard let request = request else {return}
-        service.getData(for: request) { (response) in
-            DispatchQueue.main.async {[unowned self] in
-                guard let data = response.data else { return }
-                self.data = data
-                self.movieTableView.reloadData()
-            }
+        presenter.loadData(request: request) { (data) in
+            self.movieTableView.reloadData()
         }
     }
-    
 }
 
