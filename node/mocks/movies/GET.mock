@@ -1,0 +1,187 @@
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+
+[
+      {
+        "Title": "Movie 1",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Movie 2",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Movie 3",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Movie 4",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Movie 5",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Movie 6",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Movie 7",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Movie 8",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Movie 9",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Top Movie 1",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Top Movie 2",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Top Movie 3",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Top Movie 4",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Top Movie 5",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Latest Movie 1",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Latest Movie 2",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Latest Movie 3",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Latest Movie 4",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Latest Movie 5",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      {
+        "Title": "Latest Movie 6",
+        "Release_Date": "Oct 09 1998",
+        "MPAA_Rating": "Rating",
+        "Distributor": "Trimark",
+        "Source": "Original Screenplay",
+        "Major_Genre": "Drama",
+        "Creative_Type": "Contemporary Fiction"
+      },
+      
+]
+
