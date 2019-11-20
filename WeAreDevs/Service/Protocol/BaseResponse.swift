@@ -8,14 +8,6 @@
 
 import Foundation
 
-protocol ResponseData {
-    
-}
-
-protocol ResponseError {
-    
-}
-
 protocol BaseResponse {
     associatedtype Data
     associatedtype Error

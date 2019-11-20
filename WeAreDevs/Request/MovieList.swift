@@ -12,7 +12,7 @@ struct MovieListRequest: BaseRequest {
     var url: URL {
       return URL(string: basePath+relativePath)!
     }
-    var basePath: String = AppConfig.default.environment.basePath
+    var basePath: String = AppConfig.current.environment.basePath
     var relativePath: String 
     var headers: [String : Any]?
     
@@ -21,7 +21,6 @@ struct MovieListRequest: BaseRequest {
     }
     
     func parse(data: Data?, response: URLResponse?, error: Error?) -> MoviesListReponse {
-       
         var response = handleError(data: data, error: error)
         guard let data = data, response.error == nil else {
             return response
@@ -34,7 +33,6 @@ struct MovieListRequest: BaseRequest {
             response.error = ServiceError(reason: err.localizedDescription)
         }
         return response
-        
     }
     
      func handleError(data: Data?, error: Error?) -> MoviesListReponse {
@@ -68,10 +66,7 @@ struct Movie: Codable {
     }
 }
 
-
 struct MoviesListReponse: BaseResponse {
     var error: ServiceError?
     var data: [Movie]?
 }
-
-

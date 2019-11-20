@@ -9,7 +9,7 @@
 import Foundation
 
 struct AppConfig {
-    static var `default`: AppConfig = AppConfig()
+    static var current: AppConfig = AppConfig()
     var environment: Environment = Environment.prod
     enum Environment: String {
         case prod = "http://10.132.21.132:9001/",

@@ -32,6 +32,8 @@
 		2730CD692383DFB40020FE5B /* JsonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD682383DFB40020FE5B /* JsonHandler.swift */; };
 		2730CD6B2383E7D80020FE5B /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD6A2383E7D80020FE5B /* MovieListPresenter.swift */; };
 		2730CD6E2383EA580020FE5B /* MovieListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD6D2383EA580020FE5B /* MovieListPresenterTests.swift */; };
+		2761489D2384C31B00F4CD89 /* MovieListRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2761489C2384C31B00F4CD89 /* MovieListRequestTests.swift */; };
+		2761489F2384D58F00F4CD89 /* MovieListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2761489E2384D58F00F4CD89 /* MovieListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		2730CD682383DFB40020FE5B /* JsonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandler.swift; sourceTree = "<group>"; };
 		2730CD6A2383E7D80020FE5B /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		2730CD6D2383EA580020FE5B /* MovieListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenterTests.swift; sourceTree = "<group>"; };
+		2761489C2384C31B00F4CD89 /* MovieListRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRequestTests.swift; sourceTree = "<group>"; };
+		2761489E2384D58F00F4CD89 /* MovieListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 		2730CD252382B5F20020FE5B /* WeAreDevsTests */ = {
 			isa = PBXGroup;
 			children = (
+				2761489B2384C30200F4CD89 /* Request */,
 				2730CD6C2383EA410020FE5B /* MovieListTests */,
 				2730CD5E2383C4C50020FE5B /* Mocks */,
 				2730CD262382B5F20020FE5B /* WeAreDevsTests.swift */,
@@ -263,8 +268,17 @@
 			isa = PBXGroup;
 			children = (
 				2730CD6D2383EA580020FE5B /* MovieListPresenterTests.swift */,
+				2761489E2384D58F00F4CD89 /* MovieListViewControllerTests.swift */,
 			);
 			path = MovieListTests;
+			sourceTree = "<group>";
+		};
+		2761489B2384C30200F4CD89 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2761489C2384C31B00F4CD89 /* MovieListRequestTests.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,9 +437,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2730CD272382B5F20020FE5B /* WeAreDevsTests.swift in Sources */,
+				2761489F2384D58F00F4CD89 /* MovieListViewControllerTests.swift in Sources */,
 				2730CD692383DFB40020FE5B /* JsonHandler.swift in Sources */,
 				2730CD672383DEF50020FE5B /* MockServiceManager.swift in Sources */,
 				2730CD6E2383EA580020FE5B /* MovieListPresenterTests.swift in Sources */,
+				2761489D2384C31B00F4CD89 /* MovieListRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
