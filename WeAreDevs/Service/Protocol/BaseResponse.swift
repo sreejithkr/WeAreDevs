@@ -9,10 +9,10 @@
 import Foundation
 
 protocol BaseResponse {
-    associatedtype Data
+    associatedtype Response
     associatedtype Error
     var error: Error? {get set}
-    var data: Data? {get set}
+    var data: Response? {get set}
     init() 
 }
 

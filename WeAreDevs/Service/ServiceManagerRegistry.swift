@@ -11,11 +11,11 @@ import Foundation
 class ServiceManagerRegistry {
     private static var registry: BaseServiceManager.Type!
     
-    static func setRegistry(registry: BaseServiceManager.Type) {
+    static func setServiceManagerType(registry: BaseServiceManager.Type) {
         ServiceManagerRegistry.registry = registry
     }
     
-    static func getServiceManager() -> BaseServiceManager.Type {
+    static func getServiceManagerType() -> BaseServiceManager.Type {
            return ServiceManagerRegistry.registry
     }
 }

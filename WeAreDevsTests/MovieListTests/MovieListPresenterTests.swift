@@ -12,7 +12,7 @@ import XCTest
 class MovieListPresenterTests: XCTestCase {
     var presenter: MovieListPresenter?
     override func setUp() {
-        ServiceManagerRegistry.setRegistry(registry: MockServiceManager.self)
+        ServiceManagerRegistry.setServiceManagerType(registry: MockServiceManager.self)
         presenter = MovieListPresenter()
     }
 

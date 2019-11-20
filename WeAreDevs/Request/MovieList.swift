@@ -27,7 +27,7 @@ struct MovieListRequest: BaseRequest {
         }
         do {
             let decoder = JSONDecoder()
-            let moviesList = try decoder.decode(MoviesListResponse.Data.self, from: data)
+            let moviesList = try decoder.decode(MoviesListResponse.Response.self, from: data)
             response.data = moviesList
         } catch let err {
             response.error = ServiceError(reason: err.localizedDescription)
@@ -66,7 +66,7 @@ struct Movie: Codable {
     }
 }
 
-struct MoviesListResponse: BaseResponse {
+struct MoviesListResponse: BaseResponse {    
     var error: ServiceError?
     var data: [Movie]?
 }
