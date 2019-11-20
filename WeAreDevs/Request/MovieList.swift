@@ -20,14 +20,14 @@ struct MovieListRequest: BaseRequest {
         self.relativePath = relativePath
     }
     
-    func parse(data: Data?, response: URLResponse?, error: Error?) -> MoviesListReponse {
+    func parse(data: Data?, response: URLResponse?, error: Error?) -> MoviesListResponse {
         var response = handleError(data: data, error: error)
         guard let data = data, response.error == nil else {
             return response
         }
         do {
             let decoder = JSONDecoder()
-            let moviesList = try decoder.decode(MoviesListReponse.Data.self, from: data)
+            let moviesList = try decoder.decode(MoviesListResponse.Data.self, from: data)
             response.data = moviesList
         } catch let err {
             response.error = ServiceError(reason: err.localizedDescription)
@@ -35,8 +35,8 @@ struct MovieListRequest: BaseRequest {
         return response
     }
     
-     func handleError(data: Data?, error: Error?) -> MoviesListReponse {
-        var response = MoviesListReponse()
+     func handleError(data: Data?, error: Error?) -> MoviesListResponse {
+        var response = MoviesListResponse()
         if let error = error  {
             response.error = ServiceError(reason: error.localizedDescription)
             return response
@@ -66,7 +66,7 @@ struct Movie: Codable {
     }
 }
 
-struct MoviesListReponse: BaseResponse {
+struct MoviesListResponse: BaseResponse {
     var error: ServiceError?
     var data: [Movie]?
 }
