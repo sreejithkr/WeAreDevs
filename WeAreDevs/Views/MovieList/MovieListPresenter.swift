@@ -9,7 +9,7 @@
 import Foundation
 
 class MovieListPresenter {
-    lazy var serviceManager = ServiceManagerRegistry.getServiceManagerType().init()
+    lazy var serviceManager = DependancyRegistry.getServiceManagerType().init()
     var data: [Movie] = []
     func loadData(request: MovieListRequest, competion: (([Movie])->())? ) {
            serviceManager.getData(for: request) { (response) in

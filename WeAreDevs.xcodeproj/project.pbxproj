@@ -26,7 +26,7 @@
 		2730CD5B2383A3A00020FE5B /* ViewControllerNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD5A2383A3A00020FE5B /* ViewControllerNames.swift */; };
 		2730CD5D2383A8E00020FE5B /* MovieListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD5C2383A8E00020FE5B /* MovieListViewController+TableView.swift */; };
 		2730CD602383C4EC0020FE5B /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = 2730CD5F2383C4EC0020FE5B /* movies.json */; };
-		2730CD622383DE710020FE5B /* ServiceManagerRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD612383DE710020FE5B /* ServiceManagerRegistry.swift */; };
+		2730CD622383DE710020FE5B /* DependancyRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD612383DE710020FE5B /* DependancyRegistry.swift */; };
 		2730CD642383DE950020FE5B /* BaseServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD632383DE950020FE5B /* BaseServiceManager.swift */; };
 		2730CD672383DEF50020FE5B /* MockServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD662383DEF50020FE5B /* MockServiceManager.swift */; };
 		2730CD692383DFB40020FE5B /* JsonHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2730CD682383DFB40020FE5B /* JsonHandler.swift */; };
@@ -79,7 +79,7 @@
 		2730CD5A2383A3A00020FE5B /* ViewControllerNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerNames.swift; sourceTree = "<group>"; };
 		2730CD5C2383A8E00020FE5B /* MovieListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieListViewController+TableView.swift"; sourceTree = "<group>"; };
 		2730CD5F2383C4EC0020FE5B /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
-		2730CD612383DE710020FE5B /* ServiceManagerRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerRegistry.swift; sourceTree = "<group>"; };
+		2730CD612383DE710020FE5B /* DependancyRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependancyRegistry.swift; sourceTree = "<group>"; };
 		2730CD632383DE950020FE5B /* BaseServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceManager.swift; sourceTree = "<group>"; };
 		2730CD662383DEF50020FE5B /* MockServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceManager.swift; sourceTree = "<group>"; };
 		2730CD682383DFB40020FE5B /* JsonHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandler.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 			children = (
 				2730CD652383DEA40020FE5B /* Protocol */,
 				2730CD402382B6E30020FE5B /* ServiceManager.swift */,
-				2730CD612383DE710020FE5B /* ServiceManagerRegistry.swift */,
+				2730CD612383DE710020FE5B /* DependancyRegistry.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -413,7 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2730CD622383DE710020FE5B /* ServiceManagerRegistry.swift in Sources */,
+				2730CD622383DE710020FE5B /* DependancyRegistry.swift in Sources */,
 				2730CD5123839FC30020FE5B /* AppConfig.swift in Sources */,
 				2730CD592383A3880020FE5B /* Constants.swift in Sources */,
 				2730CD552383A0950020FE5B /* MovieListViewController.swift in Sources */,

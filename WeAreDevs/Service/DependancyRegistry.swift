@@ -8,14 +8,14 @@
 
 import Foundation
 
-class ServiceManagerRegistry {
+class DependancyRegistry {
     private static var registry: BaseServiceManager.Type!
     
     static func setServiceManagerType(registry: BaseServiceManager.Type) {
-        ServiceManagerRegistry.registry = registry
+        DependancyRegistry.registry = registry
     }
     
     static func getServiceManagerType() -> BaseServiceManager.Type {
-           return ServiceManagerRegistry.registry
+           return DependancyRegistry.registry
     }
 }
