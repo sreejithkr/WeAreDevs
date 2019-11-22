@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
-    lazy var presenter = HomePresenter()
+    lazy var presenter: HomePresenterProtocol = HomePresenter()
     override func viewDidLoad() {
         super.viewDidLoad()
       
