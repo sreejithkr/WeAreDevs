@@ -26,9 +26,9 @@ class HomePresenterTests: XCTestCase {
 
     func testShouldVerifyIfFalseIsReturnedForInvalidEmailAddress() {
         let presenter = HomePresenter()
-        let validEmail = "test_User07.07.2019"
+        let inValidEmail = "test_User07.07.2019"
 
-        let result = presenter.isValid(validEmail)
+        let result = presenter.isValid(inValidEmail)
 
         XCTAssertFalse(result)
     }
