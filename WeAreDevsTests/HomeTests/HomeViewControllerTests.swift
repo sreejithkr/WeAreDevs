@@ -11,13 +11,16 @@ import XCTest
 
 class HomeViewControllerTests: XCTestCase {
     var homeViewController: HomeViewController!
+    var homepresenter = MockHomePresenter()
+
     override func setUp() {
         homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "homeViewController") as? HomeViewController
         _ = homeViewController.view
+        homeViewController.presenter = homepresenter
     }
 
     func testShouldVerifyIfTextFieldIsEmpty() {
-        XCTAssertTrue(homeViewController.errorLabel.text!.isEmpty)
+        homeViewController.emailTextField.text = ""
 
         homeViewController.subscribeTapped(UIButton())
 
@@ -25,20 +28,28 @@ class HomeViewControllerTests: XCTestCase {
     }
 
     func testShouldVerifyIfTextFieldHasAnInvalidEmail() {
-        homeViewController.emailTextField.text = "george89@email.co.in"
+        homeViewController.emailTextField.text = "george89@email.co.in.com"
+        homepresenter.setValidEmail = false
 
         homeViewController.subscribeTapped(UIButton())
 
         XCTAssertEqual(homeViewController.errorLabel.text, "Entered email is invalid.")
-//        XCTAssertEqual(homeViewController.errorLabel.text, "")
-
     }
 
-    func testShouldVerifyIfTextFieldHasValidEmail() {
+    func testShouldVerifyIfTextFieldHasValidEmailWithCom() {
         homeViewController.emailTextField.text = "george89@email.com"
+        homepresenter.setValidEmail = true
 
         homeViewController.subscribeTapped(UIButton())
 
         XCTAssertEqual(homeViewController.errorLabel.text, "")
+    }
+}
+
+
+class MockHomePresenter: HomePresenterProtocol {
+    var setValidEmail = true
+    func isValid(_ email: String) -> Bool {
+        return setValidEmail
     }
 }
