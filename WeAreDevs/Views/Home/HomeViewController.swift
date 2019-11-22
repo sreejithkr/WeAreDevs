@@ -42,7 +42,6 @@ class HomeViewController: UIViewController {
             errorLabel.text = "Enter a valid email address."
             return
         }
-
         if presenter.isValid(email) {
             //Do Make subscription
             errorLabel.text = ""
