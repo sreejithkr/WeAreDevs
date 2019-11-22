@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//This can also be tested.
 class ServiceManager: BaseServiceManager {
     
     private let session: URLSession

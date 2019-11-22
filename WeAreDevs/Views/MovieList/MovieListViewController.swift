@@ -9,14 +9,18 @@
 import UIKit
 
 class MovieListViewController: UIViewController {
-    var request: MovieListRequest?
     lazy var presenter: MovieListPresenter = MovieListPresenter()
     let movieListIdentifier =  "movieListIdentifier"
     @IBOutlet var movieTableView: UITableView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         loadData()
+    }
+    
+    func setMovieRequest(request: MovieListRequest) {
+        presenter.request = request
     }
 
     private func setup(){
@@ -26,8 +30,7 @@ class MovieListViewController: UIViewController {
     }
 
     private func loadData() {
-        guard let request = request else {return}
-        presenter.loadData(request: request) { (data) in
+        presenter.loadData() { (data) in
             self.movieTableView.reloadData()
         }
     }

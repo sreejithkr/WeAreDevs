@@ -9,7 +9,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var emailTextField: UITextField!
+    lazy var presenter = HomePresenter()
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -30,10 +32,23 @@ class HomeViewController: UIViewController {
     
     private func navigate(with request: MovieListRequest) {
         guard let destination  = storyboard?.instantiateViewController(identifier: ViewControllerNames.movieListViewController.value) as? MovieListViewController else { return }
-        destination.request = request
+        destination.setMovieRequest(request: request)
         self.show(destination, sender: self)
 
     }
 
+    @IBAction func subscribeTapped(_ sender: UIButton) {
+        guard let email = emailTextField.text, !email.isEmpty else {
+            errorLabel.text = "Enter a valid email address."
+            return
+        }
+
+        if presenter.isValid(email) {
+            //Do Make subscription
+            errorLabel.text = ""
+        } else {
+            errorLabel.text = "Entered email is invalid."
+        }
+    }
 }
 

@@ -18,9 +18,9 @@ class MovieListPresenterTests: XCTestCase {
 
     func testLoadDataCallCompelion() {
         let request = MovieListRequest(relativePath: "movies")
+        presenter?.request = request
         let expecation = expectation(description: "testLoadDataCallCompelion")
-        presenter?.loadData(request: request,
-                            competion: { (data) in
+        presenter?.loadData(competion: { (data) in
                                 expecation.fulfill()
         })
         wait(for: [expecation], timeout: 10.0)

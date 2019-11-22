@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+//This can be extended to hold a dic
 class DependancyRegistry {
     private static var registry: BaseServiceManager.Type!
     

@@ -10,55 +10,103 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="WeAreDevs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="WeAreDevs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GK6-i9-RgQ">
-                                <rect key="frame" x="22" y="128" width="166" height="166"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-ef-HlY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Id3-aq-UXC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="J70-8T-ZG2">
+                                                <rect key="frame" x="69" y="40" width="276" height="111"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GK6-i9-RgQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="GK6-i9-RgQ" secondAttribute="height" multiplier="1:1" id="3OP-UE-mX6"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Get Movies"/>
+                                                        <connections>
+                                                            <action selector="displayAllMovies:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axk-KO-WMZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtS-xS-e61">
+                                                        <rect key="frame" x="165" y="0.0" width="111" height="111"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="PtS-xS-e61" secondAttribute="height" multiplier="1:1" id="OTn-g5-hly"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                        <state key="normal" title="Get Top  Movies"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PwC-gU-a3H">
+                                                <rect key="frame" x="107" y="171" width="200" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="env-iu-tVk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGj-0B-isR">
+                                                <rect key="frame" x="107" y="209" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vB2-o0-YBF">
+                                                <rect key="frame" x="172.5" y="229" width="69" height="30"/>
+                                                <state key="normal" title="Subscribe"/>
+                                                <connections>
+                                                    <action selector="subscribeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IpA-TK-Kvg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="PwC-gU-a3H" firstAttribute="top" secondItem="J70-8T-ZG2" secondAttribute="bottom" constant="20" id="0P3-DI-oJT"/>
+                                            <constraint firstItem="YGj-0B-isR" firstAttribute="leading" secondItem="PwC-gU-a3H" secondAttribute="leading" id="13B-SK-In7"/>
+                                            <constraint firstItem="J70-8T-ZG2" firstAttribute="top" secondItem="Id3-aq-UXC" secondAttribute="top" constant="40" id="4rc-Mj-2v8"/>
+                                            <constraint firstItem="YGj-0B-isR" firstAttribute="top" secondItem="PwC-gU-a3H" secondAttribute="bottom" constant="4" id="JKK-kr-BBG"/>
+                                            <constraint firstItem="J70-8T-ZG2" firstAttribute="centerX" secondItem="Id3-aq-UXC" secondAttribute="centerX" id="L8b-m0-Tfg"/>
+                                            <constraint firstItem="vB2-o0-YBF" firstAttribute="top" secondItem="PwC-gU-a3H" secondAttribute="bottom" constant="24" id="VaC-be-ZDY"/>
+                                            <constraint firstItem="vB2-o0-YBF" firstAttribute="centerX" secondItem="PwC-gU-a3H" secondAttribute="centerX" id="WyR-Xx-dLC"/>
+                                            <constraint firstItem="PwC-gU-a3H" firstAttribute="centerX" secondItem="Id3-aq-UXC" secondAttribute="centerX" id="z1G-oc-nWG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="GK6-i9-RgQ" secondAttribute="height" multiplier="1:1" id="3OP-UE-mX6"/>
+                                    <constraint firstAttribute="bottom" secondItem="Id3-aq-UXC" secondAttribute="bottom" id="S9e-bV-K5g"/>
+                                    <constraint firstItem="Id3-aq-UXC" firstAttribute="centerY" secondItem="VTY-ef-HlY" secondAttribute="centerY" id="UE2-U8-xXD"/>
+                                    <constraint firstItem="Id3-aq-UXC" firstAttribute="centerX" secondItem="VTY-ef-HlY" secondAttribute="centerX" id="nZY-iS-DMO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Id3-aq-UXC" secondAttribute="trailing" constant="112" id="oU2-ko-Hgy"/>
+                                    <constraint firstItem="Id3-aq-UXC" firstAttribute="leading" secondItem="VTY-ef-HlY" secondAttribute="leading" id="q6C-VZ-R8H"/>
+                                    <constraint firstItem="Id3-aq-UXC" firstAttribute="top" secondItem="VTY-ef-HlY" secondAttribute="top" id="wQK-wJ-Jaq"/>
                                 </constraints>
-                                <state key="normal" title="Get Movies"/>
-                                <connections>
-                                    <action selector="displayAllMovies:" destination="BYZ-38-t0r" eventType="touchUpInside" id="axk-KO-WMZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PtS-xS-e61">
-                                <rect key="frame" x="223" y="128" width="166" height="166"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="PtS-xS-e61" secondAttribute="height" multiplier="1:1" id="OTn-g5-hly"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Get Top  Movies"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmU-aZ-LWt">
-                                <rect key="frame" x="124" y="314" width="166" height="166"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="jmU-aZ-LWt" secondAttribute="height" multiplier="1:1" id="Eqc-dq-40t"/>
-                                </constraints>
-                                <state key="normal" title="Get Latest Movies"/>
-                            </button>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Q8K-En-fXK"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="lne-xI-SAW"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GK6-i9-RgQ" firstAttribute="height" secondItem="jmU-aZ-LWt" secondAttribute="height" id="Akh-Ut-kFC"/>
-                            <constraint firstItem="jmU-aZ-LWt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GUh-hc-2DO"/>
-                            <constraint firstItem="PtS-xS-e61" firstAttribute="leading" secondItem="GK6-i9-RgQ" secondAttribute="trailing" constant="35" id="KAx-xh-3AG"/>
-                            <constraint firstItem="GK6-i9-RgQ" firstAttribute="height" secondItem="PtS-xS-e61" secondAttribute="height" id="KHj-7K-wMg"/>
-                            <constraint firstItem="PtS-xS-e61" firstAttribute="top" secondItem="GK6-i9-RgQ" secondAttribute="top" id="NjB-bJ-jmy"/>
-                            <constraint firstItem="GK6-i9-RgQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="V6V-oU-MVG"/>
-                            <constraint firstItem="jmU-aZ-LWt" firstAttribute="top" secondItem="GK6-i9-RgQ" secondAttribute="bottom" constant="20" id="esN-DT-gfa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PtS-xS-e61" secondAttribute="trailing" constant="25" id="s52-EH-tec"/>
-                            <constraint firstItem="PtS-xS-e61" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="223" id="vkZ-D0-AND"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VTY-ef-HlY" secondAttribute="bottom" id="Oad-f9-xc0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VTY-ef-HlY" secondAttribute="trailing" id="lgk-QM-6Qz"/>
+                            <constraint firstItem="VTY-ef-HlY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="s6D-Z9-U6I"/>
+                            <constraint firstItem="VTY-ef-HlY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yZx-aq-BE1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="rvT-UJ-Gbu"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="PwC-gU-a3H" id="hDh-6m-moh"/>
+                        <outlet property="errorLabel" destination="YGj-0B-isR" id="R4V-kc-AZ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
