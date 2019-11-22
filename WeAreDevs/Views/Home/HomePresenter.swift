@@ -6,6 +6,8 @@
 //  Copyright © 2019 SKR. All rights reserved.
 //
 
+import Foundation
+
 protocol HomePresenterProtocol {
     func isValid(_ email: String) -> Bool
 }
